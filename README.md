@@ -37,12 +37,12 @@ severe_mental_illness: equaling 1 indicates the history of sever mental illness
 
 pa_low, pa_high and pa_mis: equaling 1 indicates the corresponding level of physical activity; pa_mis = 1 means missing value for physical activity level. 
 
-### continuous variables
+### Continuous variables
 lnbcreann: logarithm of creatinine (umol/L)
 
-sys_bpS: systolic blood pressure (mmHg - 140)/20
+sys_bpS: systolic blood pressure (mmHg) centered at 140 divided by 20
 
-dias_bpS: diastolic blood pressure (mmHg - 80)/10
+dias_bpS: diastolic blood pressure (mmHg) centered at 80 divided by 10
 
 lhdl: logarithm of high-density lipoprotein (mmol/L)
 
@@ -51,6 +51,22 @@ NewB_LDL-CL_cent: baseline measure of LDL cholesterol, centered at 3.6 (mmol/L)
 LDL_nostatin_cent: baseline measure of LDL cholesterol, adjusted to no statin treatment status (if the patient is on statin treatment), centered at 3.6 (mmol/L)
 
 hba1c: HbA1c (mmol/mol)
+
+## Time-varying variables at the baseline
+cycle: all equal 0, i.e. baseline
+
+CurrAge_cent: age at baseline, centered at 60 divided by 10
+
+mi_0_1, mi_1_2, mi_2_3 and mi_3_inf: MI in the same year, MI in previous year, MI in 2 years ago, and MI in at least 3 years ago. They all equal 0 at baseline, as they are used to record incident MI, rather than history. The same principle apply to stroke and CRV. 
+
+dmPre_1, dmPre_3, dmPre_4, dm_0_10 and dm_10_inf: equaling to 1 indicate no diabetes & HbA1c<32, no diabetes & HbA1c 37-42, no diabetes & HbA1c 42-48, diabetes duration 0-10 years, and diabetes duration 10+ years, respectively. Prespecify these variables using the baseline diabetes diagnosis and HbA1c. All equal 0 means no diabetes & HbA1c 32-37. They are automatically updated in the model simulation.
+
+
+
+
+
+
+
 
 
 
