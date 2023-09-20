@@ -8,7 +8,7 @@ In the "input" folder, "cf_hpc_v4_VDppUpdate.rds", "tx_hpc.rds" and "pf.rds" are
 
 Files in the input folder with the prefix "sample_" are sample datasets of five pseudo individuals' characteristics, for primary prevention (without cardiovascular disease history) and secondary prevention (with cardiovascular disease history) separately. The model reads in baseline (b) and time-varying (t) characteristics in two separate files, in order to speed up simulation. Please specify your input characteristics in the same format as the samples
 
-## The following are columns' names and their corresponding meaning
+## Baseline fixed variables
 
 id_new: patient ID
 
