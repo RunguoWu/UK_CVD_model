@@ -17,25 +17,25 @@ Intercept: all equal 1
 ### 0/1 binary variables
 male: 1 = male; 0 = female
 
-race_afro, race_sa and race_otherna: equaling 1 indicates African, South Asain and other ethnicities, respectively. Otherwise White ethnicity
+race_afro, race_sa and race_otherna: African, South Asain and other ethnicities, respectively. Otherwise White ethnicity
 
 unhealthy_diet: 1 = unhealthy diet; 0 = healthy diet. Please refer to our published paper for more details
 
-h_mi_raw_only, cvd_only, h_pad_raw_only, othchd_only and number_events2: equaling 1 indicates history of myocardial infarction (MI), history of cerebral vascular disease (stroke), history of peripheral artery disease (PAD), history of other coronary heart diseases, history of more than one of these diseases, respectively; In primary prevention population, all equal 0; in secondary prevention population, one of them equals to 1  
+h_mi_raw_only, cvd_only, h_pad_raw_only, othchd_only and number_events2: History of myocardial infarction (MI), history of cerebral vascular disease (stroke), history of peripheral artery disease (PAD), history of other coronary heart diseases, history of more than one of these diseases, respectively; In primary prevention population, all equal 0; in secondary prevention population, one of them equals to 1  
 
 dmT1: history of Type 1 diabetes
 
-underweight, overweight, obese, obese2 and obese3: equaling 1 indicates BMI(kg/m2) < 18.5, 25-30, 30-35, 35-40 and 40+, respectively. Otherwise BMI 18.5-25
+underweight, overweight, obese, obese2 and obese3: BMI(kg/m2) < 18.5, 25-30, 30-35, 35-40 and 40+, respectively. Otherwise BMI 18.5-25
 
 Txhypen: history of treated hypertension
 
-smk_ex; smk_cur: equaling 1 indicates ex-smoker and current smoker, respectively. Otherwise non-smoker
+smk_ex; smk_cur: ex-smoker and current smoker, respectively. Otherwise non-smoker
 
-town1, town2, town4 and town5: equaling 1 indicates the corresponding socioeconomic deprivation quintile. town1=1 means the least deprived. 
+town1, town2, town4 and town5: indicate the corresponding socioeconomic deprivation quintile. town1=1 means the least deprived. 
 
-severe_mental_illness: equaling 1 indicates the history of sever mental illness
+severe_mental_illness: the history of severe mental illness
 
-pa_low, pa_high and pa_mis: equaling 1 indicates the corresponding level of physical activity; pa_mis = 1 means missing value for physical activity level. 
+pa_low, pa_high and pa_mis: indicates the corresponding level of physical activity; pa_mis = 1 means missing value for physical activity level. 
 
 ### Continuous variables
 lnbcreann: logarithm of creatinine (umol/L)
@@ -57,10 +57,17 @@ cycle: all equal 0, i.e. baseline
 
 CurrAge_cent: age at baseline, centered at 60 divided by 10
 
-mi_0_1, mi_1_2, mi_2_3 and mi_3_inf: MI in the same year, MI in previous year, MI in 2 years ago, and MI in at least 3 years ago. They all equal 0 at baseline, as they are used to record incident MI, rather than history. The same principle apply to stroke and CRV. 
+mi_0_1, mi_1_2, mi_2_3 and mi_3_inf: MI in the same year, MI in previous year, MI in 2 years ago, and MI in at least 3 years ago. They all equal 0 at baseline, as they are used to record incident MI, rather than history. The same principle applies to stroke and CRV. 
 
-dmPre_1, dmPre_3, dmPre_4, dm_0_10 and dm_10_inf: equaling to 1 indicate no diabetes & HbA1c<32, no diabetes & HbA1c 37-42, no diabetes & HbA1c 42-48, diabetes duration 0-10 years, and diabetes duration 10+ years, respectively. Prespecify these variables using the baseline diabetes diagnosis and HbA1c. All equal 0 means no diabetes & HbA1c 32-37. They are automatically updated in the model simulation.
+dmPre_1, dmPre_3, dmPre_4, dm_0_10 and dm_10_inf: no diabetes & HbA1c<32, no diabetes & HbA1c 37-42, no diabetes & HbA1c 42-48, diabetes duration 0-10 years, and diabetes duration 10+ years, respectively. Please prespecify these variables using the baseline diabetes diagnosis and HbA1c. All equal 0 means no diabetes & HbA1c 32-37. They will be automatically updated in the model simulation.
 
+cancer_bsl_*: baseline cancer in corresponding years of history.
+
+cancer_icd_*: incident cancer that happens in a certain year ago in simulation; all equaling 0 at baseline; They will be automatically updated in the model simulation.
+
+CurrAge_cent_int_*: interaction terms with age; please prespecify depending on the baseline status. They will be automatically updated in the model simulation.
+
+mi_1_inf_qol_pp, stroke_1_inf_qol_pp, two_plus_qol, wstatinayr1, wstatinayr2And, ind6_1 and ind7_1, d_without_*, nvd and vd: all equal 0
 
 
 
